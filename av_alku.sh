@@ -4,7 +4,7 @@
 #sudo apt-get update
 
 # Asennetaan puppet
-#sudo apt-get install puppet
+sudo apt-get install -y puppet
 
 # Kopioidaan puppet kokeilumoduli
 sudo mkdir -p /etc/puppet/modules/avjj17/manifests
