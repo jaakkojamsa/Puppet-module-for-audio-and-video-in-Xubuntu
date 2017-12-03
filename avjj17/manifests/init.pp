@@ -29,7 +29,7 @@ class avjj17 {
 	file { '/bin/acconffi.sh':
                 content => template ('avjj17/acconffi.sh'),
                 owner => '0', group => '0', mode => '0755',
-	}
+	} ->
 
 	exec { 'acconffi.sh':
 		command => 'acconffi.sh 8600',
