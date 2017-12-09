@@ -15,5 +15,10 @@ sudo cp -r $CPOLKU/Puppet-module-for-audio-and-video-in-Xubuntu/avjj17/ /etc/pup
 # Lisätään Puppet confiin master koneen nimi
 #sudo puppet apply -e 'file { "/tmp/puppet.conf": content => "\n[main]\nlogdir=/var/log/puppet\nvardir=/var/lib/puppet\nssldir=/var/lib/puppet/ssl\nrundir=/run/puppet\nfactpath=$vardir/lib/facter\nprer$
 
-# Moduli ajetaan komennolla sudo puppet apply -e 'class {"avjj17":}'
+# Lisätään audacityconffi käyttäjälle
+
+mkdir $CPOLKU/.audacity-data/
+sudo cp $CPOLKU/Puppet-module-for-audio-and-video-in-Xubuntu/alkumat/audacity.cfg $CPOLKU/.audacity-data/
+
+# Puppet moduli ajetaan komennolla sudo puppet apply -e 'class {"avjj17":}'
 
